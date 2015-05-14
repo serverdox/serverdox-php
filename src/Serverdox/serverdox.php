@@ -18,7 +18,7 @@ class Serverdox {
 	public $contacts;
 	public $logs;
 
-	public function __construct($api_key = null, $apiEndpoint = "serverdox-api.dev", $apiVersion = "v1", $ssl = false){
+	public function __construct($api_key = null, $apiEndpoint = "api.serverdox.com", $apiVersion = "v1", $ssl = true){
 
 		$this->api_key = $api_key;
 		$this->api_key = $apiEndpoint;
