@@ -33,7 +33,7 @@ Be sure to visit the Serverdox official
 information about our API. 
 
 If you find a bug, please submit the issue in Github directly. 
-[Mailgun-PHP Issues](https://github.com/serverdox/Serverdox-PHP/issues)
+[Serverdox-PHP Issues](https://github.com/serverdox/Serverdox-PHP/issues)
 
 As always, if you need additional assistance, drop us a note at 
 [support@serverdox.com](mailto:support@serverdox.com).
