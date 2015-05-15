@@ -17,7 +17,7 @@ Linux / Mac OSX:
 
 
 Windows:  
-*PHP must be installed on your computer, [download](http://windows.php.net/download/0). Instructions from [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-windows).* 
+*PHP must be installed on your computer, [download](http://windows.php.net/download/). Instructions from [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-windows).* 
 
 1. Download and run [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe).  
 2. Open a Command Prompt and type "php composer require serverdox/serverdox-php:~1.0".  
@@ -29,11 +29,11 @@ Support and Feedback
 --------------------
 
 Be sure to visit the Serverdox official 
-[documentation website](https://serverdox.com/api-docs) for additional 
+[API documentation](http://www.serverdox.com/api-docs) for additional 
 information about our API. 
 
 If you find a bug, please submit the issue in Github directly. 
-[Serverdox-PHP Issues](https://github.com/serverdox/Serverdox-PHP/issues)
+[Serverdox-PHP Issues](https://github.com/Serverdox/Serverdox-PHP/issues)
 
-As always, if you need additional assistance, drop us a note at 
-[support@serverdox.com](mailto:support@serverdox.com).
+As always, if you need additional assistance, contact us at
+[https://serverdox.com/contact](https://www.serverdox.com/contact).
