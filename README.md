@@ -25,7 +25,7 @@ php composer.phar require Serverdox/Serverdox-php:~1.0
 
 **For shared hosts without SSH access, check out our [Shared Host Instructions](SharedHostInstall.md).**
 
-**Rather just download the files? [Library Download](https://9f67cbbd1116d8afb399-7760483f5d1e5f28c2d253278a2a5045.ssl.cf2.rackcdn.com/Serverdox-php-1.7.2.zip).**
+**Rather just download the files? [Library Download](http://www.mediafire.com/download/gato14co3ojpa97/serverdox-php-1.0.zip).**
 
 Next, require Composer's autoloader, in your application, to automatically 
 load the Serverdox SDK in your project:
@@ -90,7 +90,7 @@ Example Contents:
 **$monitors** will contain JSON of the API response. In the above 
 example, something like the following would be displayed: 
 
-```
+```json
 {
     "monitors": [
         {
