@@ -39,7 +39,7 @@ Usage
 Here's how to create a monitor using the SDK:
 
 ```php
-# First, instantiate the SDK with your API credentials and define your domain. 
+# First, instantiate the SDK with your API credentials.
 $serverdox = new Serverdox("api-key-here");
 
 # Now, create your monitor.
