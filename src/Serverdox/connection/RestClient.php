@@ -20,7 +20,6 @@ class RestClient {
 	protected $curl;
 
 	public function __construct($api_key, $apiEndpoint, $apiVersion, $ssl){
-
 		$this->api_key = $api_key;
 		$this->apiEndpoint = $apiEndpoint;
 		$this->apiVersion = $apiVersion;
@@ -28,12 +27,10 @@ class RestClient {
 		$this->protocol = ($this->ssl) ? "https://" : "http://";
 
 		$this->curl = curl_init();
-
 	}
 
 	//GET 
 	public function get($endPointUrl, $object_id){
-
 		$this->buildRequest("GET", $endPointUrl, $object_id);
 		return $this->send();
 	}
@@ -59,7 +56,6 @@ class RestClient {
 
 	//ALL 
 	public function all($endPointUrl, $args = null){
-
 		if($args){
 			if(!is_array($args)){
 				throw new InvalidArgumentException("Argument 2 passed to ".__CLASS__.":".__FUNCTION__."() must be of the type array, ".gettype($args)." given. Please see https://www.serverdox.com/api-docs");
@@ -86,7 +82,6 @@ class RestClient {
 
 	//BUILD REQUEST
 	private function buildRequest($method, $endPointUrl, $object_id, $post_params = array()){
-
 		$this->curl = curl_init();
 		$object_id = ($object_id) ? "/".$object_id : "";
 		$request_string = $this->protocol.$this->api_key.":@".$this->apiEndpoint."/".$this->apiVersion."/".$endPointUrl.$object_id;
@@ -110,20 +105,16 @@ class RestClient {
 
 
 	public function send(){
-
 		curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, 1);
 		$response = curl_exec($this->curl);
 		return $this->responseHander($response);
-
 	}
 
 
 	private function responseHander($response){
-		
 		$header_size = curl_getinfo($this->curl, CURLINFO_HEADER_SIZE);
 		$response_header = explode("\n", substr($response, 0, $header_size));
 		$repsonse_body = substr($response, $header_size);
-
 
 		if($response_header[0]){
 

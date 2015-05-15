@@ -7,8 +7,6 @@ require_once "interfaces/LogsInterface.php";
 use Serverdox\Objects\Interfaces\LogsInterface;
 use Serverdox\Connection\Exceptions\InvalidArgumentException;
 
-
-
 class Logs implements LogsInterface {
 
 	protected $restClient;

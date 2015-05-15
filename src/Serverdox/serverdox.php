@@ -2,8 +2,6 @@
 
 namespace Serverdox;
 
-//require_once "autoload.php";
-
 use Serverdox\Connection\RestClient;
 use Serverdox\Objects\Monitors;
 use Serverdox\Objects\Contacts;
@@ -19,10 +17,6 @@ class Serverdox {
 	public $logs;
 
 	public function __construct($api_key = null, $apiEndpoint = "api.serverdox.com", $apiVersion = "v1", $ssl = true){
-
-		$this->api_key = $api_key;
-		$this->api_key = $apiEndpoint;
-		$this->api_key = $apiVersion;
 
 		$this->restClient = new RestClient($api_key, $apiEndpoint, $apiVersion, $ssl);
 

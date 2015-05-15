@@ -7,8 +7,6 @@ require_once "interfaces/MonitorsInterface.php";
 use Serverdox\Objects\Interfaces\MonitorsInterface;
 use Serverdox\Connection\Exceptions\InvalidArgumentException;
 
-
-
 class Monitors implements MonitorsInterface {
 
 	protected $restClient;
