@@ -82,7 +82,6 @@ $monitors = $serverdox->monitors->all(array(
     'limit' => 2
 ));
 
-
 echo '<pre>', print_r($monitors), '</pre>';
 
 ```
