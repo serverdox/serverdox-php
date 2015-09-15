@@ -5,7 +5,7 @@ This is the Serverdox PHP SDK. This SDK contains methods for easily interacting
 with the Serverdox API. 
 Below are examples to get you started. For additional examples, please see our 
 official documentation 
-at https://www.serverdox.com/api-docs
+at https://www.serverdox.com/api/docs
 
 [![Latest Stable Version](https://poser.pugx.org/serverdox/serverdox-php/v/stable.png)](https://packagist.org/packages/serverdox/serverdox-php)
 
