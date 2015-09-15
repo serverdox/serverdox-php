@@ -25,7 +25,7 @@ php composer.phar require serverdox/serverdox-php:~1.0
 
 **For shared hosts without SSH access, check out our [Shared Host Instructions](SharedHostInstall.md).**
 
-**Rather just download the files? [Library Download](http://www.mediafire.com/download/9y163rikuspztxo/serverdox-php-v1.0.zip).**
+**Rather just download the files? [Library Download](https://www.serverdox.com/download/sdk/serverdox-php-v1.0.zip).**
 
 Next, require Composer's autoloader, in your application, to automatically 
 load the Serverdox SDK in your project:
