@@ -7,7 +7,7 @@ Below are examples to get you started. For additional examples, please see our
 official documentation 
 at https://www.serverdox.com/api-docs
 
-[![Latest Stable Version](https://poser.pugx.org/Serverdox/Serverdox-php/v/stable.png)](https://packagist.org/packages/Serverdox/Serverdox-php)
+[![Latest Stable Version](https://poser.pugx.org/serverdox/serverdox-php/v/stable.png)](https://packagist.org/packages/serverdox/serverdox-php)
 
 Installation
 ------------
@@ -20,7 +20,7 @@ composer and the Serverdox SDK.
 curl -sS https://getcomposer.org/installer | php
 
 # Add Serverdox as a dependency
-php composer.phar require Serverdox/Serverdox-php:~1.0
+php composer.phar require serverdox/serverdox-php:~1.0
 ``` 
 
 **For shared hosts without SSH access, check out our [Shared Host Instructions](SharedHostInstall.md).**
@@ -43,16 +43,17 @@ Here's how to create a monitor using the SDK:
 $serverdox = new Serverdox("api-key-here");
 
 # Now, create your monitor.
-$serverdox->monitors->create($array(
-	'name'    					=> 'My First Monitor', 
-    'url'     					=> 'https://www.google.com', 
-    'monitor_server_location'	=> 'US',
-    'alert_sms'					=> false,
-    'contacts'					=> array(
-    	'contact-id-here',
-    	'contact-id-here'
+$serverdox->monitors->create(array(
+    "name"                      => "Google",
+    "url"                       => "https://www.google.com",
+    "monitor_server_location"   => "NYC",
+    "notes"                     => "My notes about Google.",
+    "contacts"                  => array(
+        "contact-id-here" => array(
+            "sms" => true
+        )
     ),
-    'me_contact'    			=> true
+    "me_contact"                => true
 ));
 ```
 
@@ -95,70 +96,47 @@ example, something like the following would be displayed:
     "monitors": [
         {
             "id": "M_XXXXXXXXXXXXXXXX",
-            "name": "Facebook",
-            "url": "https://www.facebook.com",
-            "monitor_server_location": "US",
+            "name": "Google",
+            "url": "https://www.google.com",
+            "monitor_server_location": "NYC",
             "current_status": "Pending",
-            "alert_sms": false,
-            "alert_email": true,
-            "alert_twitter": true,
+            "notes": "My notes about Google.",
             "run": true,
             "contacts": [
                 {
-                    "is_me": true,
-                    "name": "Me",
-                    "email": "myemail@email.com",
-                    "phone_number": "+1 010-101-0101",
-                    "twitter": "mytwitter"
-                },
-                {
-                    "is_me": false,
-                    "id": "C_XXXXXXXXXXXXXXXX",
-                    "name": "John Doe",
-                    "email": "johndoe@email.com",
-                    "phone_number": "+1 234-567-8900",
-                    "twitter": "johndoe"
+                    "me": false,
+                    "C_XXXXXXXXXXXXXXXX": {
+                        "email": false,
+                        "sms": true,
+                        "twitter": false
+                    }
+                        
                 }
             ],
             "created_at": 1420070401
         },
         {
-		    "id": "M_XXXXXXXXXXXXXXXX",
-		    "name": "My First Monitor",
-		    "url": "https://www.google.com",
-		    "monitor_server_location": "US",
-		    "current_status": "Pending",
-		    "alert_sms": false,
-		    "alert_email": true,
-		    "alert_twitter": true,
-		    "run": true,
-		    "contacts": [
-		        {
-		            "is_me": true,
-		            "name": "Me",
-		            "email": "myemail@email.com",
-		            "phone_number": "+1 010-101-0101",
-		            "twitter": "mytwitter"
-		        },
-		        {
-		            "is_me": false,
-		            "id": "C_XXXXXXXXXXXXXXXX",
-		            "name": "John Doe",
-		            "email": "johndoe@email.com",
-		            "phone_number": "+1 234-567-8900",
-		            "twitter": "johndoe"
-		        },
-		        {
-		            "is_me": false,
-		            "id": "C_XXXXXXXXXXXXXXXX",
-		            "name": "Jane Doe",
-		            "email": "janedoe@email.com",
-		            "phone_number": "+1 234-567-8902",
-		            "twitter": null
-		        }
-		    ],
-		    "created_at": 1420070400
-		}
+            "id": "M_XXXXXXXXXXXXXXXX",
+            "name": "Serverdox",
+            "url": "https://www.serverdox.com",
+            "monitor_server_location": "LON",
+            "current_status": 200,
+            "run": true,
+            "contacts": [
+                {
+                    "me": true,
+                },
+                {
+                    "me": false,
+                    "C_XXXXXXXXXXXXXXXX": {
+                        "email": true,
+                        "sms": true,
+                        "twitter": false
+                    }
+                }
+            ],
+            "created_at": 1420070400
+        }
     ],
     "remaining": 3,
     "livemode": true
@@ -185,7 +163,7 @@ Be sure to visit the Serverdox official
 information about our API. 
 
 If you find a bug, please submit the issue in Github directly. 
-[Serverdox-PHP Issues](https://github.com/Serverdox/Serverdox-PHP/issues)
+[Serverdox-PHP Issues](https://github.com/serverdox/serverdox-php/issues)
 
 As always, if you need additional assistance, contact us at
 [https://serverdox.com/contact](https://www.serverdox.com/contact).

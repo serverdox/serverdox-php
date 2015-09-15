@@ -21,7 +21,7 @@ class Serverdox {
 		$this->restClient = new RestClient($api_key, $apiEndpoint, $apiVersion, $ssl);
 
 		$this->monitors = new Monitors($this->restClient);
-		$this->contact 	= new Contacts($this->restClient);
+		$this->contacts 	= new Contacts($this->restClient);
 		$this->logs 	= new Logs($this->restClient);
 
 	}
