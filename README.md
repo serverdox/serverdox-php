@@ -158,7 +158,7 @@ Support and Feedback
 --------------------
 
 Be sure to visit the Serverdox official 
-[API documentation](http://www.serverdox.com/api-docs) for additional 
+[API documentation](https://www.serverdox.com/api/docs) for additional 
 information about our API. 
 
 If you find a bug, please submit the issue in Github directly. 
